@@ -12,6 +12,7 @@ import SHtml._
 import Helpers._
 import model._
 import _root_.net.liftweb.util._
+import _root_.net.liftweb.common._
 import _root_.javax.servlet._
 import _root_.javax.servlet.http._
 import utils.Utilities._

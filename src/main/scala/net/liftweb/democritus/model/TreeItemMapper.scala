@@ -20,6 +20,7 @@ package net.liftweb.democritus.model
 //import _root_.scala.collection.immutable._
 import _root_.net.liftweb.mapper._
 import _root_.net.liftweb.util._
+import _root_.net.liftweb.common._
 import _root_.net.liftweb.sitemap._
 import _root_.net.liftweb.sitemap.Loc._
 import _root_.net.liftweb.http._

@@ -19,6 +19,7 @@ import JqJE._
 import mapper._
 
 import util._
+import common._
 import Helpers._
 
 import _root_.scala.xml.{NodeSeq, Text}

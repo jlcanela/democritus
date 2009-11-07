@@ -1,6 +1,7 @@
 package bootstrap.liftweb
 
 import _root_.net.liftweb.util._
+import _root_.net.liftweb.common._
 import _root_.net.liftweb.http._
 import provider._
 import _root_.net.liftweb.sitemap._
@@ -24,6 +25,7 @@ import tree._
   */
 class Boot {
   def boot {
+
     if (!DB.jndiJdbcConnAvailable_?)
       DB.defineConnectionManager(DefaultConnectionIdentifier, DBVendor)
 
@@ -65,6 +67,7 @@ class Boot {
        
     
     S.addAround(DB.buildLoanWrapper)
+
   }
 
   /**
@@ -95,7 +98,7 @@ object DBVendor extends ConnectionManager {
     //"org.apache.derby.jdbc.EmbeddedDriver"
 
     val dbUrl: String = Props.get("db.url") openOr
-    "jdbc:mysql://localhost:3306/lift_democritus?user=glenn&password=monday"
+    "jdbc:mysql://localhost:3306/democritus?user=democritus&password=t5qa1nb9"
     //"jdbc:derby:lift_democritus;create=true"
     
 

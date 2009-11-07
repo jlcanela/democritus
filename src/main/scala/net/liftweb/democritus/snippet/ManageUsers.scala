@@ -3,6 +3,7 @@ package net.liftweb.democritus.snippet
 import _root_.net.liftweb.mapper._
 import view._
 import _root_.net.liftweb.util._
+import _root_.net.liftweb.common._
 import net.liftweb.democritus.model._
 import _root_.net.liftweb.http._
 import js.JsCmds._
@@ -14,14 +15,14 @@ import _root_.scala.collection.mutable._
 
 
 class UserView(entity:User, snippet:ManageUsers) extends ModelView[User](entity, snippet){
-  override val editAction = TheBindParam("edit", snippet.link("edit", ()=>load, Text(S?("Edit Roles"))))   
+  override lazy val editAction = TheBindParam("edit", snippet.link("edit", ()=>load, Text(S?("Edit Roles"))))
   
 }
 
 
 class ManageUsers extends ModelSnippet[User]{ 
   
-   val view: ModelView[User] =  new UserView(new User, this)
+   val view =  new UserView(new User, this)
   
   /**
    * The list snippet

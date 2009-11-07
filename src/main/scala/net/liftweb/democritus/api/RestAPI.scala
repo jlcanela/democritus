@@ -5,6 +5,7 @@ import js._
 import JE._
 import rest._
 import _root_.net.liftweb.util._
+import _root_.net.liftweb.common._
 import StringHelpers._
 import _root_.scala.xml._
 import _root_.net.liftweb.mapper._
@@ -12,7 +13,7 @@ import java.util.Date
 import net.liftweb.democritus.utils.Utilities._
 import net.liftweb.democritus.model._
 import _root_.scala.collection.mutable._
-import _root_.net.liftweb.json._
+//import _root_.net.liftweb.json._
 
 
 object RestAPI extends XMLApiHelper {
