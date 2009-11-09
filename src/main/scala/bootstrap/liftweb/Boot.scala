@@ -33,7 +33,7 @@ class Boot {
     LiftRules.addToPackages("net.liftweb.democritus")
     //Schemifier.schemify(true, Log.infoF _, User, Content, ContentTag, Tag, ContentAdmin)
     Schemifier.schemify(true, Log.infoF _, User, Content, ContentTag, Tag, ContentAdmin)
-    
+
     // Build SiteMap
     val entries = Menu(Loc("Home", List("index"), "Home")) :: User.sitemap ::: Content.menus
     LiftRules.setSiteMap(SiteMap(entries:_*))
@@ -51,21 +51,21 @@ class Boot {
       Full(() => LiftRules.jsArtifacts.hide("ajax-loader").cmd)
 
     LiftRules.early.append(makeUtf8)
-    
+
     LiftRules.dispatch.prepend(RestAPI.dispatch)
-    
+
     LiftRules.rewrite.append(rewriteContent)
 
     LiftRules.loggedInTest = Full(() => User.loggedIn_?)
-    
+
     LiftRules.resourceNames = "democritus" :: Nil
-    
+
     MenuWidget.init
-    JQueryUI.init  
+    JQueryUI.init
     UserWithRoles.init
     TreeView.init
-       
-    
+
+
     S.addAround(DB.buildLoanWrapper)
 
   }
@@ -84,9 +84,9 @@ class Boot {
 
 }
 
-/**
-* Database connection calculation
-*/
+///**
+//* Database connection calculation
+//*/
 object DBVendor extends ConnectionManager {
   private var pool: List[Connection] = Nil
   private var poolSize = 0
@@ -100,7 +100,7 @@ object DBVendor extends ConnectionManager {
     val dbUrl: String = Props.get("db.url") openOr
     "jdbc:mysql://localhost:3306/democritus?user=democritus&password=t5qa1nb9"
     //"jdbc:derby:lift_democritus;create=true"
-    
+
 
     Class.forName(driverName)
 

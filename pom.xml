@@ -38,11 +38,11 @@
       <artifactId>lift-core</artifactId>
       <version>1.1-SNAPSHOT</version>
     </dependency>
-    <dependency>
+<!--    <dependency>
       <groupId>org.apache.derby</groupId>
       <artifactId>derby</artifactId>
       <version>10.4.2.0</version>
-    </dependency>
+    </dependency>-->
     <dependency>
      <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
@@ -101,7 +101,7 @@
           <contextPath>/</contextPath>
           <scanIntervalSeconds>5</scanIntervalSeconds>
           <stopKey>foo</stopKey>
-          <stopPort>999</stopPort>
+          <stopPort>1999</stopPort>
         </configuration>
       </plugin>
       <plugin>
@@ -118,14 +118,14 @@
           <nosuffix>true</nosuffix>
         </configuration>
       </plugin>
-      <plugin>
+<!--      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-idea-plugin</artifactId>
         <configuration>
           <downloadSources>true</downloadSources>
         </configuration>
-      </plugin>
-      <plugin>
+      </plugin>-->
+<!--      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-eclipse-plugin</artifactId>
         <configuration>
@@ -144,7 +144,7 @@
             <java.lang.String>ch.epfl.lamp.sdt.core.scalabuilder</java.lang.String>
           </buildcommands>
         </configuration>
-      </plugin>
+      </plugin>-->
     </plugins>
   </build>
   <reporting>
